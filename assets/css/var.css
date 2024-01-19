@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+:root{
+
+    --main-font-family: 'IBM Plex Mono', monospace;
+
+    /* --heading-font-family: 'Montserrat', monospace; */
+
+    --heading-font-family: 'Playfair Display', serif;
+
+    --white-color : #f9f9f9;
+    --black-color : #000300;
+
+    --green-color :   #6E714D;
+    --red-color : #A93F33;
+    --brown-color:   #7E6350;
+    --beige-color : #F4EAE0;
+    --violet-color : #977ac4; 
+}

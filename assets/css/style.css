@@ -1,0 +1,839 @@
+/* ---------------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+body{
+  background-color: var(--white-color) !important;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+p,li,a, div {
+  font-family: var(--main-font-family) !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--heading-font-family) !important;
+}
+
+a{
+  text-decoration: none !important; 
+}
+p{
+  line-height: 32px;
+}
+
+
+.container {
+    padding: 80px 120px;
+    position: relative;
+  }
+
+.page-view {
+  min-height: 90vh;
+}
+
+.user-select {
+  user-select: all;
+  -webkit-user-select: all; /* Add support for Safari and Safari on iOS */
+}
+
+/* --------------------------- Menu ------------------------------------------ */
+
+.navbar{
+  font-size: 20px;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: var(--black-color) !important;
+  font-weight: 800;
+  display: block;
+  padding: 25px;
+}
+
+.navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
+  color: var(--white-color) !important;
+}
+
+.navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:hover {
+  color: var(--brown-color) !important;
+}
+
+.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:hover, .navbar-default .navbar-nav> .active> a:focus {
+  color: var(--brown-color) !important;
+}
+
+.navbar .container-fluid .navbar-header a{
+  color: inherit;
+  position: relative;
+}
+
+.navbar >.navbar-nav>.resume-button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar >.navbar-nav>.resume-button:after {
+  color: var(--black-color) !important;
+}
+
+/* ---------------------------- PrÃ©sentation -------------------------------------*/
+
+.img-intro img{
+  position: absolute;
+  max-width: 80%;
+  width: 70%;
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(2px 2px 8px var(--green-color));
+}
+
+.img-intro img:hover {
+  transform: scale(1.1);
+  transition: 0.7s ease;
+}
+
+.box-intro {
+  border: 2px solid var(--black-color);
+  box-shadow: 6px 6px var(--green-color);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  margin: 50px;
+}
+
+.text-animate { 
+  color:var(--red-color); 
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: bold; 
+  font-size: 100px;
+}
+.relative{
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.cursor{
+  width: 3px;
+  height: 150px;
+  background: var(--red-color);
+  animation: cursor 1s ease infinite;
+}
+@keyframes cursor{
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+.strong-intro:hover {
+  text-decoration: underline wavy; 
+  text-underline-offset: 10px;
+}
+/* ----------------------- A propos de moi ------------------------------------------------------ */
+
+.img-about-me img{
+  position: relative;
+  width: 80%;
+  height: auto;
+  top: -90px;
+  filter: drop-shadow(4px 4px 8px var(--white-color));
+  transition: transform 0.7s ease; 
+}
+
+.img-about-me img:hover {
+  transform: translateY(-50px);
+}
+
+#about.content-fluid {
+  background-color: var(--green-color);
+  color: var(--white-color);
+}
+
+#about .about-title {
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-decoration: underline wavy;
+  text-underline-offset: 15px;
+}
+
+#about p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+#about i {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.collapsible-skills > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.collapsible-skills .content-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; 
+}
+
+.collapsible-skills > input[type="checkbox"]:checked ~ .content-collapsible {
+  height: auto;
+  overflow: visible;
+  max-height: 1000px; 
+  transition: max-height 0.3s ease; 
+}
+
+.collapsible-skills label {
+  display: block;
+  color: var(--brown-color);
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: var(--white-color);
+  margin-bottom: 1em;
+}
+
+.collapsible-skills label:hover,
+.collapsible-skills label:focus {
+  background: #f0eeee;
+}
+
+.collapsible-skills .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.collapsible-skills {
+  max-width: 40em;
+  width: max-content;
+  height: max-content;
+}
+
+.collapsible-skills p:last-child {
+  margin-bottom: 0;
+}
+
+section.collapsible-skills {
+  margin-top: -200px;
+}
+
+
+/* -------------------- Experiences -------------------------------------------- */
+
+#experience {
+  margin-right: 500px;
+  position: relative;
+}
+
+.experience-title {
+  text-decoration: underline wavy;
+  text-underline-offset: 15px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--beige-color);
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Styles pour le collapsible ouvert */
+.collapsible-experience input[type="checkbox"]:checked + .experience .arrow {
+  transform: rotate(180deg);
+}
+
+.collapsible-experience input[type="checkbox"]:checked + .experience + .content-collapsible {
+  max-height: 1000px; 
+  transition: max-height 0.3s ease;
+}
+
+#experience::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 68%; 
+  transform: translateX(-50%); 
+  width: 50%; 
+  border-bottom: 1px solid var(--black-color);
+}
+
+#experience .experience-title {
+  font-weight: bold;
+  margin-left: 500px;
+  font-size: 50px;
+}
+
+.collapsible-experience > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.collapsible-experience .content-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  flex: 2;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-experience > input[type="checkbox"]:checked ~ .content-collapsible {
+  height: auto;
+  overflow: visible;
+}
+
+.collapsible-experience {
+  margin-bottom: 1em;
+}
+
+.collapsible-experience li > a {
+  color: #A92813;
+  text-decoration: underline !important;
+}
+
+.collapsible-experience > input[type="checkbox"]:checked ~ .content-collapsible {
+  padding: 15px;
+  border: 1px solid var(--black-color);
+  border-top: 0;
+}
+
+.collapsible-experience .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.collapsible-experience label {
+  color: var(--beige-color);
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: var(--red-color);
+  display: block;
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+}
+
+.collapsible-experience label:hover,
+.collapsible-experience label:focus {
+  background: #7e332b;
+}
+
+.collapsible-experience {
+  max-width: 65em;
+  width: max-content;
+  height: max-content;
+}
+
+.collapsible-experience p:last-child {
+  margin-bottom: 0;
+}
+
+#experience i {
+  font-size: 30px;
+}
+
+/* ----------------------- Work ------------------------------------------------------ */
+
+#work {
+  margin-top: 150px;
+}
+
+#work .container {
+background-color: var(--beige-color);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px; 
+  height: 300px; 
+  margin: 10px;
+  background-color: var(--white-color);
+  border: 1px solid var(--white-color);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 8px 8px var(--brown-color);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--black-color);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.card-content h2 {
+  font-size: 20px;
+}
+
+.card-content p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.date {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.card img {
+  max-height: 100%; 
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* ----------------------- Contact ------------------------------------------------------ */
+
+#contact {
+  color: var(--black-color) !important;
+  font-size: 25px;
+}
+
+#contact i {
+  color: var(--green-color);
+}
+/* ----------------------- Footer ------------------------------------------------------ */
+
+
+footer {
+  width: 100%;
+  padding: 50px 0;
+	background-color: var(--brown-color);
+}
+footer p {
+	font-size: 18px;
+  color: #ebe9e9;
+	cursor: pointer;
+}
+footer p:hover {
+	color: var(--white-color);
+  text-decoration: underline wavy;
+  text-underline-offset: 5px;
+}
+
+footer a span {
+  color: #ebe9e9;
+  cursor: pointer;
+}
+
+footer a :hover {
+	color: var(--white-color);
+}
+
+footer .fa-heart {
+  color: var(--violet-color);
+  cursor: pointer;
+}
+
+
+/* ----------------------------------------------- media queries ----------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 75%;
+  }
+  p {
+    font-size: 85%;
+  }
+  .container {
+    padding: 20px;
+  }
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 15px;
+  }
+  .img-intro img, .img-about-me img {
+    width: 70%;
+  }
+  .img-intro img {
+    right: -500px !important;
+  }
+  .text-animate {
+    font-size: 60px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .container {
+    padding: 60px 80px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 25px 15px;
+  }
+  .img-intro img, .img-about-me img {
+    width: 80%;
+  }
+  .text-animate {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 75%;
+  }
+  p {
+    font-size: 85%;
+  }
+  .img-intro img, .img-about-me img {
+    width: 100%;
+    position: relative;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .img-about-me img {
+    width: 95%;
+    top: -45px; 
+  }
+
+  #about p, #about .about-title, #about i {
+    font-size: 16px; 
+  }
+
+  .collapsible-skills, .collapsible-skills .content-collapsible {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #experience {
+    margin-right: 20px; 
+  }
+
+  #experience .experience-title {
+    font-size: 24px; 
+    margin-left: 20px; 
+  }
+
+  .collapsible-experience, .collapsible-experience .content-collapsible {
+    width: 100%; 
+  }
+}
+
+.collapsible-experience input[type="checkbox"]:checked + .experience .arrow {
+  transform: rotate(180deg);
+}
+
+.collapsible-experience input[type="checkbox"]:checked + .experience + .content-collapsible {
+  max-height: 1000px; 
+  transition: max-height 0.3s ease;
+}
+
+/* @media screen and (max-width: 600px) {
+  .img-intro img {
+      width: 400px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .img-intro img {
+    max-width: 100%; 
+    position: static; 
+  }
+
+  .box-intro, .text-animate, .relative {
+    margin: 20px; 
+    padding: 5px;
+    font-size: 50px; 
+  }
+
+  .cursor {
+    height: 75px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapsible-skills {
+    max-width: 100%; 
+
+    margin-top: 0; 
+  }
+
+  .collapsible-skills > input[type="checkbox"]:checked ~ .content-collapsible {
+    max-height: 500px;
+  }
+
+  #about.content-fluid {
+    padding-bottom: 50px;
+  }
+
+  #about .about-title, #about p, #about i {
+    font-size: 16px; 
+  }
+}
+
+/* ---------------------------------- Bouton Back to top ------------------------------------------------------------- */
+
+.back-to-top {
+  position: fixed;
+  z-index: 1;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--violet-color);
+  font-size: 15px;
+  padding: 1em;
+  display: none;
+}
+
+.back-to-top:hover, .back-to-top:focus, .back-to-top:active {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white-color);
+} 
+
+/* ----------------------------------------------- Bouton dark-light mode -------------------------------------------------------- */
+
+.dark-mode button {
+  background-color: var(--green-color);
+  color: var(--black-color);
+}
+
+.dark-mode button:hover {
+  background-color: var(--brown-color);
+  color: var(--white-color);
+}
+
+#mode-toggle {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#mode-toggle.dark-mode {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+#mode-toggle.dark-mode i.fa-sun {
+  display: none;
+}
+
+#mode-toggle.dark-mode i.fa-moon {
+  display: inline-block;
+}
+
+#mode-toggle i.fa-sun {
+  display: inline-block;
+}
+
+#mode-toggle i.fa-moon {
+  display: none;
+}
+
+#mode-toggle:hover {
+  color: var(--green-color);
+}
+
+#mode-toggle .dark-mode:hover {
+  color: var(--green-color);
+}
+/* ----------------------------------------------- CSS du Dark mode -------------------------------------------------------- */
+
+/* ---------------------------- Dark Mode -------------------------- */
+.dark-mode {
+  --white-color: #262220;
+  --black-color: #F7F1F0;
+  --green-color: #7E6350;;
+  --brown-color: #6E714D;
+  --red-color:  #A93F33;
+
+  background-color: var(--white-color) !important;
+  color: var(--black-color) !important;
+}
+
+.dark-mode .text-animate {
+  color: var(--black-color)!important;
+}
+.dark-mode .cursor {
+  background-color: var(--black-color);
+}
+
+
+.dark-mode .navbar-default {
+  background-color: var(--white-color);
+}
+
+.dark-mode .navbar-default .navbar-nav>li>a {
+  color: var(--black-color) !important;
+}
+
+.dark-mode .navbar-default .navbar-nav> .active> a, .dark-mode .navbar-default .navbar-nav> .active> a:hover, .dark-mode .navbar-default .navbar-nav> .active> a:focus {
+  color: var(--white-color) !important;
+}
+
+.dark-mode button#mode-toggle {
+  color: var(--black-color) !important;
+  background-color: var(--white-color) !important;
+}
+
+.dark-mode .img-intro img {
+  filter: drop-shadow(2px 2px 8px var(--brown-color));
+}
+
+.dark-mode #about.content-fluid {
+  color: var(--black-color);
+}
+
+.dark-mode .card-content{
+  color: var(--white-color) !important;
+}
+
+.dark-mode footer {
+  background-color: var(--green-color);
+}
+
+.dark-mode footer p {
+  color: var(--black-color);
+}
+.dark-mode footer a:hover {
+  color: rgb(212, 210, 210);  
+}
+
+.dark-mode footer a span {
+  color: var(--black-color);
+}
+
+.dark-mode footer a span:hover {
+  color: rgb(212, 210, 210);
+}
+
+.dark-mode footer {
+  background-color: var(--brown-color);
+}
+
+.dark-mode .back-to-top:hover, .dark-mode .back-to-top:focus {
+  background-color: #ccc;
+}
+
+.dark-mode #home .text-animate {
+  color: var(--brown-color);
+}
+
+.dark-mode .collapsible-experience label {
+  background: var(--red-color);
+  color: var(--black-color) !important;
+}
+
+.dark-mode .collapsible-experience label:hover,
+.dark-mode .collapsible-experience label:focus {
+  background: #7e332b;
+}
+
+.dark-mode .collapsible-skills label {
+  background: rgb(46, 46, 46);
+  color: var(--black-color) !important;
+}
+
+.dark-mode .collapsible-skills label:hover,
+.dark-mode .collapsible-skills label:focus {
+  background: var(--white-color);
+}
+
+.dark-mode #work .container {
+  background-color: var(--green-color);
+}
+
+.dark-mode .card {
+  background-color: var(--brown-color);
+  box-shadow: 8px 8px var(--red-color);
+}
+
+.dark-mode .collapsible-experience li > a {
+  color: #C3A09D;
+  text-decoration: underline !important;
+}
+
+.dark-mode #about {
+ background-color: var(--brown-color);
+}
