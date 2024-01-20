@@ -3,13 +3,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
 :root{
 
     --main-font-family: 'IBM Plex Mono', monospace;
-
+    --heading-font-family: 'Noto Sans JP', sans-serif;
     /* --heading-font-family: 'Montserrat', monospace; */
-
-    --heading-font-family: 'Playfair Display', serif;
+    /* --heading-font-family: 'Playfair Display', serif; */
 
     --white-color : #f9f9f9;
     --black-color : #000300;
