@@ -47,7 +47,7 @@ p{
 
 .user-select {
   user-select: all;
-  -webkit-user-select: all; /* Add support for Safari and Safari on iOS */
+  -webkit-user-select: all; 
 }
 
 /* --------------------------- Menu ------------------------------------------ */
@@ -202,7 +202,6 @@ p{
 .collapsible-skills > input[type="checkbox"]:checked ~ .content-collapsible {
   height: auto;
   overflow: visible;
-  max-height: 1000px; 
   transition: max-height 0.3s ease; 
 }
 
@@ -252,6 +251,9 @@ section.collapsible-skills {
 .experience-title {
   text-decoration: underline wavy;
   text-underline-offset: 15px;
+  font-weight: bold;
+  margin-left: 1000px;
+  font-size: 50px;
 }
 
 .arrow {
@@ -265,7 +267,6 @@ section.collapsible-skills {
   transition: transform 0.3s ease;
 }
 
-/* Styles pour le collapsible ouvert */
 .collapsible-experience input[type="checkbox"]:checked + .experience .arrow {
   transform: rotate(180deg);
 }
@@ -283,12 +284,6 @@ section.collapsible-skills {
   transform: translateX(-50%); 
   width: 50%; 
   border-bottom: 1px solid var(--black-color);
-}
-
-#experience .experience-title {
-  font-weight: bold;
-  margin-left: 500px;
-  font-size: 50px;
 }
 
 .collapsible-experience > input[type="checkbox"] {
@@ -464,11 +459,15 @@ background-color: var(--beige-color);
 #contact {
   color: var(--black-color) !important;
   font-size: 25px;
-  margin-top: 500px;
+  margin-top: 100px;
 }
 
 #contact i {
   color: var(--green-color);
+}
+
+#contact .container {
+  margin-top: 100px;
 }
 /* ----------------------- Footer ------------------------------------------------------ */
 
@@ -575,29 +574,74 @@ footer .fa-heart {
     font-size: 85%;
   }
   .img-intro img, .img-about-me img {
-    width: 100%;
+    width: 80%;
     position: relative;
     position: relative;
-    transform: translateX(0); /* Reset any previous translations */
+    transform: translateX(0);
     transition: transform 0.3s ease;
   }
 }
 
-
-@media screen and (max-width: 768px) {
-  .img-about-me img {
-    width: 95%;
-    top: -45px; 
+@media screen and (max-width: 680px) {
+  .navbar-collapse {
+    display: none;
   }
-
-  #about p, #about .about-title, #about i {
-    font-size: 16px; 
+  .navbar-toggle {
+    display: block;
   }
-
-  .collapsible-skills, .collapsible-skills .content-collapsible {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 75%;
+  }
+  p {
+    font-size: 85%;
+  }
+  .img-intro img, .img-about-me img {
+    width: 80%;
+    position: relative;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  .collapsible-skills {
     width: 100%;
+    position: relative;
+    top: 250px;
+  }
+  #about.content-fluid {
+    padding-bottom: 250px;
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .collapsible-skills {
+    width: 100%;
+    position: relative;
+    top: 250px;
+  }
+  #about.content-fluid {
+    padding-bottom: 250px;
+  }
+  .img-intro img{
+    width: 50%;
+    right: 50px !important;
+  }
+  .experience-title {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  /* CSS rules for max-width: 820px */
+}
+
+@media screen and (max-width: 1280px) {
+  .experience-title {
+    position: relative;
+    right: 1000px !important;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   #experience {
@@ -623,12 +667,6 @@ footer .fa-heart {
   transition: max-height 0.3s ease;
 }
 
-/* @media screen and (max-width: 600px) {
-  .img-intro img {
-      width: 400px;
-  }
-} */
-
 @media screen and (max-width: 768px) {
   .img-intro img {
     max-width: 100%; 
@@ -645,26 +683,77 @@ footer .fa-heart {
     height: 75px; 
   }
 }
-
-@media screen and (max-width: 768px) {
-  .collapsible-skills {
-    max-width: 100%; 
-
-    margin-top: 0; 
+/* Pour les écrans larges comme les ordinateurs de bureau */
+@media (min-width: 1200px) {
+  .img-about-me img {
+    width: 80%;
+    top: -90px;
   }
 
-  .collapsible-skills > input[type="checkbox"]:checked ~ .content-collapsible {
-    max-height: 500px;
+  #about .about-title {
+    font-size: 36px;
   }
 
-  #about.content-fluid {
-    padding-bottom: 50px;
-  }
-
-  #about .about-title, #about p, #about i {
-    font-size: 16px; 
+  #about p {
+    font-size: 20px;
+    margin-bottom: 50px;
   }
 }
+
+/* Pour les écrans de taille moyenne comme les ordinateurs portables */
+@media (max-width: 1199px) {
+  .img-about-me img {
+    width: 60%;
+    top: -60px;
+  }
+
+  #about .about-title {
+    font-size: 30px;
+  }
+
+  #about p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+  .img-about-me img {
+    width: 50%;
+    top: -40px;
+  }
+
+  #about .about-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  #about p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Pour les smartphones */
+@media (max-width: 480px) {
+  .img-about-me img {
+    width: 80%;
+    top: -30px;
+  }
+
+  #about .about-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #about p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+
 
 /* ---------------------------------- Bouton Back to top ------------------------------------------------------------- */
 
