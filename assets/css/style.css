@@ -32,12 +32,11 @@ a{
   text-decoration: none !important; 
 }
 p{
-  line-height: 32px;
+  line-height: 2em;
 }
 
-
 .container {
-    padding: 80px 120px;
+    padding: 5% 10%;
     position: relative;
   }
 
@@ -102,8 +101,8 @@ p{
 
 .img-intro img{
   position: absolute;
-  max-width: 80%;
-  width: 70%;
+  max-width: 70%;
+  width: 60%;
   height: auto;
   z-index: 1;
   filter: drop-shadow(2px 2px 8px var(--green-color));
@@ -119,8 +118,8 @@ p{
   box-shadow: 6px 6px var(--green-color);
   border-radius: 5px;
   display: inline-block;
-  padding: 10px;
-  margin: 50px;
+  padding: 1em;
+  margin: 5%;
 }
 
 .text-animate { 
@@ -128,12 +127,12 @@ p{
   white-space: nowrap;
   display: inline-block;
   font-weight: bold; 
-  font-size: 100px;
+  font-size: 5em;
 }
 .relative{
   position: relative;
   display: flex;
-  gap: 10px;
+  gap: 1em;
 }
 .cursor{
   width: 3px;
@@ -149,7 +148,7 @@ p{
 
 .strong-intro:hover {
   text-decoration: underline wavy; 
-  text-underline-offset: 10px;
+  text-underline-offset: 0.2em;
 }
 /* ----------------------- A propos de moi ------------------------------------------------------ */
 
@@ -157,13 +156,12 @@ p{
   position: relative;
   width: 80%;
   height: auto;
-  top: -90px;
   filter: drop-shadow(4px 4px 8px var(--white-color));
   transition: transform 0.7s ease; 
 }
 
 .img-about-me img:hover {
-  transform: translateY(-50px);
+  transform: translateY(-5%);
 }
 
 #about.content-fluid {
@@ -173,19 +171,19 @@ p{
 
 #about .about-title {
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
   text-decoration: underline wavy;
   text-underline-offset: 15px;
 }
 
 #about p {
-  font-size: 20px;
-  margin-bottom: 50px;
+  font-size: 2em;
+  margin-bottom: 5%;
 }
 
 #about i {
-  font-size: 30px;
-  margin: 10px;
+  font-size: 2.5em;
+  margin: 1%;
 }
 
 .collapsible-skills > input[type="checkbox"] {
@@ -210,7 +208,7 @@ p{
   color: var(--brown-color);
   cursor: pointer;
   font-weight: normal;
-  padding: 15px;
+  padding: 1em;
   background: var(--white-color);
   margin-bottom: 1em;
 }
@@ -237,33 +235,28 @@ p{
 }
 
 section.collapsible-skills {
-  margin-top: -200px;
+  margin-top: -30%;
 }
 
 
 /* -------------------- Experiences -------------------------------------------- */
 
-#experience {
-  margin-right: 500px;
-  position: relative;
-}
-
 .experience-title {
   text-decoration: underline wavy;
-  text-underline-offset: 15px;
+  text-underline-offset: 0.em;
   font-weight: bold;
-  margin-left: 1000px;
-  font-size: 50px;
+  margin-left: 15em;
+  font-size: 4em;
 }
 
 .arrow {
   display: inline-block;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid var(--beige-color);
-  margin-left: 10px;
+  border-left: 0.625em solid transparent;
+  border-right: 0.625em solid transparent;
+  border-top: 0.625em solid var(--beige-color);
+  margin-left: 0.625em;
   transition: transform 0.3s ease;
 }
 
@@ -272,7 +265,7 @@ section.collapsible-skills {
 }
 
 .collapsible-experience input[type="checkbox"]:checked + .experience + .content-collapsible {
-  max-height: 1000px; 
+  max-height: 100%;
   transition: max-height 0.3s ease;
 }
 
@@ -280,10 +273,19 @@ section.collapsible-skills {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 68%; 
-  transform: translateX(-50%); 
-  width: 50%; 
-  border-bottom: 1px solid var(--black-color);
+  left: 55%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 0.1em solid var(--black-color);
+}
+
+.collapsible-experience {
+  max-width: 75em;
+  width: max-content;
+  height: max-content;
+  margin-bottom: 1em;
+  position: relative;
+  right: 20em;
 }
 
 .collapsible-experience > input[type="checkbox"] {
@@ -303,18 +305,14 @@ section.collapsible-skills {
   overflow: visible;
 }
 
-.collapsible-experience {
-  margin-bottom: 1em;
-}
-
 .collapsible-experience li > a {
   color: #A92813;
   text-decoration: underline !important;
 }
 
 .collapsible-experience > input[type="checkbox"]:checked ~ .content-collapsible {
-  padding: 15px;
-  border: 1px solid var(--black-color);
+  padding: 1.875em;
+  border: 0.0625em solid var(--black-color);
   border-top: 0;
 }
 
@@ -328,7 +326,7 @@ section.collapsible-skills {
   color: var(--beige-color);
   cursor: pointer;
   font-weight: normal;
-  padding: 15px;
+  padding: 1.875em;
   background: var(--red-color);
   display: block;
   flex: 1;
@@ -341,28 +339,22 @@ section.collapsible-skills {
   background: #7e332b;
 }
 
-.collapsible-experience {
-  max-width: 65em;
-  width: max-content;
-  height: max-content;
-}
-
 .collapsible-experience p:last-child {
   margin-bottom: 0;
 }
 
 #experience i {
-  font-size: 30px;
+  font-size: 3.125em;
 }
 
 /* ----------------------- Work ------------------------------------------------------ */
 
 #work {
-  margin-top: 150px;
+  margin-top: 2em;
 }
 
 #work .container {
-background-color: var(--beige-color);
+  background-color: var(--beige-color);
 }
 
 .cards-container {
@@ -379,21 +371,17 @@ background-color: var(--beige-color);
   align-items: center;
 }
 
-.card-video {
-  width: 100%; /* Définissez la largeur à 100% pour occuper toute la ligne */
-  margin: 10px 0; /* Réglez la marge selon vos préférences */
-}
-
 .card {
-  width: 300px; 
-  height: 300px; 
-  margin: 40px;
+  width: 20em; 
+  height: 20em; 
+  margin: 2em;
   background-color: var(--white-color);
   border: 1px solid var(--white-color);
   transition: transform 0.2s ease-in-out;
   overflow: hidden;
   position: relative;
-  box-shadow: 8px 8px var(--brown-color);
+  box-shadow: 0.5em 0.5em var(--brown-color);
+  cursor: pointer; 
 }
 
 .card:hover {
@@ -413,8 +401,6 @@ background-color: var(--beige-color);
   color: var(--black-color);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  /* backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
   background-color: rgba(255, 255, 255, 0.5); 
 
 }
@@ -424,13 +410,13 @@ background-color: var(--beige-color);
 }
 
 .card-content p {
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 0.875em;
+  margin-top: 0.625em;
 }
 
 .date {
-  font-size: 12px;
-  margin-top: 10px;
+  font-size: 0.75em;
+  margin-top: 0.625em;
 }
 
 .card a {
@@ -440,17 +426,22 @@ background-color: var(--beige-color);
 
 .card img {
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover img {
+  opacity: 0; 
 }
 
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
   }
 }
 
@@ -458,8 +449,8 @@ background-color: var(--beige-color);
 
 #contact {
   color: var(--black-color) !important;
-  font-size: 25px;
-  margin-top: 100px;
+  font-size: 2.5em;
+  margin-top: 7%;
 }
 
 #contact i {
@@ -467,25 +458,25 @@ background-color: var(--beige-color);
 }
 
 #contact .container {
-  margin-top: 100px;
+  margin-top: 5%;
 }
 /* ----------------------- Footer ------------------------------------------------------ */
 
 
 footer {
   width: 100%;
-  padding: 50px 0;
+  padding: 3% 0;
 	background-color: var(--brown-color);
 }
 footer p {
-	font-size: 18px;
+	font-size: 1.2em;
   color: #ebe9e9;
 	cursor: pointer;
 }
 footer p:hover {
 	color: var(--white-color);
   text-decoration: underline wavy;
-  text-underline-offset: 5px;
+  text-underline-offset: 0.5em;
 }
 
 footer a span {
@@ -493,7 +484,16 @@ footer a span {
   cursor: pointer;
 }
 
-footer a :hover {
+footer ul li a {
+  color: var(--beige-color);
+  font-size: 1.5em;
+  margin: 0 1em;
+}
+footer ul li a:hover {
+  color: var(--violet-color);
+}
+
+footer a span:hover {
 	color: var(--white-color);
 }
 
@@ -765,7 +765,7 @@ footer .fa-heart {
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--violet-color);
-  font-size: 15px;
+  font-size: 1.3em;
   padding: 1em;
   display: none;
 }
