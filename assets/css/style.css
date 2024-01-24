@@ -471,8 +471,6 @@ footer p {
 }
 footer p:hover {
 	color: var(--white-color);
-  text-decoration: underline wavy;
-  text-underline-offset: 0.5em;
 }
 
 footer a i {
