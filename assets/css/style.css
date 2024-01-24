@@ -475,7 +475,7 @@ footer p:hover {
   text-underline-offset: 0.5em;
 }
 
-footer a span {
+footer a i {
   color: #ebe9e9;
   cursor: pointer;
 }
@@ -489,7 +489,7 @@ footer ul li a:hover {
   color: var(--violet-color);
 }
 
-footer a span:hover {
+footer a i:hover {
 	color: var(--white-color);
 }
 
@@ -525,22 +525,32 @@ footer .fa-heart {
     margin: 20px; 
     padding: 5px;
     font-size: 50px; 
-  }
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
 
+#experience {
+  margin-right: 20px; 
+}
   .cursor {
     height: 75px; 
   }
-  #experience {
-    margin-right: 20px; 
-  }
 
   #experience .experience-title {
-    font-size: 24px; 
-    margin-left: 20px; 
+    font-size: 3em; 
   }
 
-  .collapsible-experience, .collapsible-experience .content-collapsible {
-    width: 100%; 
+  .collapsible-skills {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30em;
+  }
+  footer{
+    padding: 5% 0;
+  }
+  #contact h2, #contact{
+    font-size: 1em;
   }
 }
 
@@ -566,7 +576,10 @@ footer .fa-heart {
     position: relative;
     top: 25em;
   }
-  #about.content-fluid {
+  .collapsible-experience, .collapsible-experience .content-collapsible {
+    width: 100%; 
+  }
+    #about.content-fluid {
     padding-bottom: 20em;
   }
 }
@@ -630,6 +643,9 @@ footer .fa-heart {
     position: relative;
     transform: translateX(0);
     transition: transform 0.3s ease;
+  }
+  .collapsible-experience, .collapsible-experience .content-collapsible {
+    width: 100%; 
   }
   .collapsible-skills {
     width: 100%;
@@ -772,11 +788,11 @@ footer .fa-heart {
   color: rgb(212, 210, 210);  
 }
 
-.dark-mode footer a span {
+.dark-mode footer a i {
   color: var(--black-color);
 }
 
-.dark-mode footer a span:hover {
+.dark-mode footer a i:hover {
   color: rgb(212, 210, 210);
 }
 
