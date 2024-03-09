@@ -304,8 +304,9 @@ section.collapsible-skills {
 }
 
 .collapsible-experience li > a {
-  color: var(--brown-color);
+  color: var(--violet-color);
   text-decoration: underline !important;
+  font-weight: bold;
 }
 
 .collapsible-experience > input[type="checkbox"]:checked ~ .content-collapsible {
