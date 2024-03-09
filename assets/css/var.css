@@ -5,19 +5,37 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
 
+@font-face {
+    font-family: 'PPPangaia-Ultralight';
+    src: url('PPPangaia-Ultralight.otf');
+
+}
+@font-face {
+    font-family: 'PPAcma-Light';
+    src: url('PPAcma-Light.otf'), 
+}
+
 :root{
 
-    --main-font-family: 'IBM Plex Mono', monospace;
-    --heading-font-family: 'Noto Sans JP', sans-serif;
-    /* --heading-font-family: 'Montserrat', monospace; */
-    /* --heading-font-family: 'Playfair Display', serif; */
+    /* --main-font-family: 'IBM Plex Mono', monospace; */
+
+    --main-font-family: 'PPPangaia-Ultralight', sans-serif;
+    --heading-font-family: 'PPAcma-Light', sans-serif;
 
     --white-color : #f9f9f9;
     --black-color : #000300;
+    /* --black-color : #22223B; */
 
-    --green-color :   #6E714D;
-    --red-color : #A93F33;
-    --brown-color:   #7E6350;
-    --beige-color : #F4EAE0;
-    --violet-color : #977ac4; 
+    --green-color :   #565264;
+
+    --red-color : #706677;
+    /* --red-color: rgb(46, 46, 46); */
+
+    --brown-color:   #9d8189;
+
+    --beige-color : #f2e9e4;
+
+    --violet-color : rgb(46, 46, 46); 
+
+
 }

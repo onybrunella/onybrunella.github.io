@@ -4,8 +4,8 @@ const body = document.body;
 const currentMode = localStorage.getItem('mode');
 
 function updateIcon() {
-  const sunIcon = document.querySelector('#mode-toggle i.fa-sun');
-  const moonIcon = document.querySelector('#mode-toggle i.fa-moon');
+  const sunIcon = document.querySelector('#mode-toggle img.fa-sun');
+  const moonIcon = document.querySelector('#mode-toggle img.fa-moon');
   
   if (body.classList.contains('dark-mode')) {
     sunIcon.style.display = 'inline-block';

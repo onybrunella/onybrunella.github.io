@@ -52,7 +52,9 @@ p{
 /* --------------------------- Menu ------------------------------------------ */
 
 .navbar{
-  font-size: 20px;
+  font-size: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease-in-out;
 }
 
 .navbar .container-fluid {
@@ -123,7 +125,7 @@ p{
 }
 
 .text-animate { 
-  color:var(--red-color); 
+  color:var(--brown-color); 
   white-space: nowrap;
   display: inline-block;
   font-weight: bold; 
@@ -242,7 +244,6 @@ section.collapsible-skills {
 /* -------------------- Experiences -------------------------------------------- */
 
 .experience-title {
-  text-decoration: underline wavy;
   text-underline-offset: 0.em;
   font-weight: bold;
   font-size: 4em;
@@ -278,10 +279,11 @@ section.collapsible-skills {
 }
 
 .collapsible-experience {
-  max-width: 75em;
+  max-width: 50em;
   width: max-content;
   height: max-content;
   margin-bottom: 1em;
+  font-size: 20px;
 }
 
 .collapsible-experience > input[type="checkbox"] {
@@ -302,7 +304,7 @@ section.collapsible-skills {
 }
 
 .collapsible-experience li > a {
-  color: #A92813;
+  color: var(--brown-color);
   text-decoration: underline !important;
 }
 
@@ -332,7 +334,7 @@ section.collapsible-skills {
 
 .collapsible-experience label:hover,
 .collapsible-experience label:focus {
-  background: #7e332b;
+  background: #423e50;
 }
 
 .collapsible-experience p:last-child {
@@ -398,7 +400,7 @@ section.collapsible-skills {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   background-color: rgba(255, 255, 255, 0.5); 
-
+  font-size: 1.5em;  
 }
 
 .card:hover .card-content {
@@ -444,13 +446,18 @@ section.collapsible-skills {
 /* ----------------------- Contact ------------------------------------------------------ */
 
 #contact {
-  color: var(--black-color) !important;
   font-size: 2.5em;
   margin-top: 7%;
 }
 
 #contact i {
-  color: var(--green-color);
+  color: var(--red-color);
+}
+
+#contact a{ 
+
+    color: var(--black-color);
+  text-decoration: underline;
 }
 
 #contact .container {
@@ -728,11 +735,11 @@ footer .fa-heart {
 
 /* ---------------------------- Dark Mode -------------------------- */
 .dark-mode {
-  --white-color: #262220;
-  --black-color: #F7F1F0;
-  --green-color: #7E6350;;
-  --brown-color: #6E714D;
-  --red-color:  #A93F33;
+  --white-color: #070707;
+  --black-color: #f9f9f9;
+  --green-color: #9d8189;
+  --brown-color: #565264;
+  --red-color:  #706677;
 
   background-color: var(--white-color) !important;
   color: var(--black-color) !important;
@@ -744,7 +751,6 @@ footer .fa-heart {
 .dark-mode .cursor {
   background-color: var(--black-color);
 }
-
 
 .dark-mode .navbar-default {
   background-color: var(--white-color);
@@ -772,7 +778,7 @@ footer .fa-heart {
 }
 
 .dark-mode .card-content{
-  color: var(--white-color) !important;
+  background-color: rgb(46, 46, 46);
 }
 
 .dark-mode footer {
@@ -799,7 +805,7 @@ footer .fa-heart {
 }
 
 .dark-mode .back-to-top:hover, .dark-mode .back-to-top:focus {
-  background-color: #ccc;
+  background-color: rgb(85, 83, 83);
 }
 
 .dark-mode #home .text-animate {
@@ -813,7 +819,7 @@ footer .fa-heart {
 
 .dark-mode .collapsible-experience label:hover,
 .dark-mode .collapsible-experience label:focus {
-  background: #7e332b;
+  background: #423e50;
 }
 
 .dark-mode .collapsible-skills label {
@@ -831,7 +837,6 @@ footer .fa-heart {
 }
 
 .dark-mode .card {
-  background-color: var(--brown-color);
   box-shadow: 8px 8px var(--red-color);
 }
 
@@ -842,4 +847,12 @@ footer .fa-heart {
 
 .dark-mode #about {
  background-color: var(--brown-color);
+}
+
+.dark-mode .back-to-top {
+  color: var(--black-color);
+}
+
+.dark-mode .boo {
+  background-color: var(--black-color);
 }
