@@ -173,7 +173,7 @@ p{
 
 #about .about-title {
   font-weight: bold;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
   text-decoration: underline wavy;
   text-underline-offset: 15px;
 }
