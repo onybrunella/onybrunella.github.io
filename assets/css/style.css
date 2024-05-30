@@ -172,9 +172,9 @@ p {
   }
 }
 
-.strong-intro:hover {
+.strong-intro {
   text-decoration: underline wavy;
-  text-underline-offset: 0.2em;
+  /* text-underline-offset: 0.2em; */
 }
 
 /* ----------------------- A propos de moi ------------------------------------------------------ */
@@ -698,9 +698,9 @@ footer .fa-heart {
   .img-intro img,
   .img-about-me img {
     width: 80%;
-    position: relative;
+    /* position: relative;
     transform: translateX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; */
   }
 }
 
