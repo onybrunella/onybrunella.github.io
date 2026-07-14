@@ -1,41 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
-
-@font-face {
-    font-family: 'PPPangaia-Ultralight';
-    src: url('PPPangaia-Ultralight.otf');
-
-}
-@font-face {
-    font-family: 'PPAcma-Light';
-    src: url('PPAcma-Light.otf'), 
-}
-
-:root{
-
-    /* --main-font-family: 'IBM Plex Mono', monospace; */
-
-    --main-font-family: 'PPPangaia-Ultralight', sans-serif;
-    --heading-font-family: 'PPAcma-Light', sans-serif;
+:root {
+    --main-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    --heading-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 
     --white-color : #f9f9f9;
     --black-color : #000300;
-    /* --black-color : #22223B; */
 
     --green-color :   #565264;
 
     --red-color : #706677;
-    /* --red-color: rgb(46, 46, 46); */
 
     --brown-color:   #9d8189;
 
     --beige-color : #f2e9e4;
 
-    --violet-color : rgb(46, 46, 46); 
-
-
+    --violet-color : rgb(46, 46, 46);
 }
