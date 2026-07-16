@@ -1,19 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-    --main-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-    --heading-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  --main-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  --heading-font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 
-    --white-color : #f9f9f9;
-    --black-color : #000300;
+  /* Legacy names kept for compatibility with style.css */
+  --white-color: #f9f9f9;
+  --black-color: #1a1719;
+  --green-color: #565264;
+  --red-color: #706677;
+  --brown-color: #9d8189;
+  --beige-color: #f2e9e4;
+  --violet-color: #2e2e2e;
 
-    --green-color :   #565264;
+  /* Semantic tokens */
+  --bg: var(--white-color);
+  --bg-elevated: #ffffff;
+  --text: var(--black-color);
+  --text-muted: #5c5660;
+  --accent: var(--brown-color);
+  --accent-soft: #c3a09d;
+  --section: var(--green-color);
+  --surface: var(--beige-color);
+  --border: rgba(26, 23, 25, 0.14);
+  --shadow: var(--brown-color);
+  --card-bg: #ffffff;
+  --nav-bg: #f9f9f9;
+}
 
-    --red-color : #706677;
+html.dark-mode {
+  --white-color: #121016;
+  --black-color: #f4f0ea;
+  --green-color: #2a2733;
+  --red-color: #8a8196;
+  --brown-color: #d4b4ba;
+  --beige-color: #2e2b36;
+  --violet-color: #0c0b0f;
 
-    --brown-color:   #9d8189;
+  --bg: #121016;
+  --bg-elevated: #1c1a22;
+  --text: #f4f0ea;
+  --text-muted: #c7c0c8;
+  --accent: #d4b4ba;
+  --accent-soft: #c3a09d;
+  --section: #2a2733;
+  --surface: #2e2b36;
+  --border: rgba(244, 240, 234, 0.14);
+  --shadow: #9d8189;
+  --card-bg: #23202b;
+  --nav-bg: #16141c;
+}
 
-    --beige-color : #f2e9e4;
-
-    --violet-color : rgb(46, 46, 46);
+body {
+  background-color: var(--bg);
+  color: var(--text);
 }

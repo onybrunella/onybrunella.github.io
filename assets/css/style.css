@@ -669,7 +669,11 @@ section.collapsible-skills {
   padding: 0.2em;
 }
 
-.dark-mode .experience-title .boo {
+html.dark-mode .img-about-me img {
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.45));
+}
+
+html.dark-mode .experience-title .boo {
   background-color: transparent;
 }
 
@@ -1550,16 +1554,6 @@ footer .fa-heart {
 
 /* ----------------------------------------------- Bouton dark-light mode -------------------------------------------------------- */
 
-.dark-mode button {
-  background-color: var(--green-color);
-  color: var(--black-color);
-}
-
-.dark-mode button:hover {
-  background-color: var(--brown-color);
-  color: var(--white-color);
-}
-
 #mode-toggle {
   background-color: var(--white-color);
   color: var(--black-color);
@@ -1608,222 +1602,261 @@ footer .fa-heart {
   color: var(--green-color);
 }
 
-/* ----------------------------------------------- CSS du Dark mode -------------------------------------------------------- */
+/* ----------------------------------------------- Dark mode -------------------------------------------------------- */
 
-/* ---------------------------- Dark Mode -------------------------- */
-.dark-mode {
-  --white-color: #070707;
-  --black-color: #f9f9f9;
-  --green-color: #9d8189;
-  --brown-color: #565264;
-  --red-color: #706677;
-
-  background-color: var(--white-color) !important;
-  color: var(--black-color) !important;
+html.dark-mode,
+html.dark-mode body,
+body.dark-mode {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
 }
 
-.dark-mode .hero-star,
-.dark-mode .hero-deco {
-  filter: brightness(1.1);
+html.dark-mode .hero-star,
+html.dark-mode .hero-deco {
+  filter: brightness(1.15) saturate(0.95);
+  opacity: 0.9;
 }
 
-.dark-mode .text-animate {
-  color: var(--black-color) !important;
+html.dark-mode .text-animate,
+html.dark-mode .hero-section .text-animate,
+html.dark-mode #home .text-animate {
+  color: var(--accent) !important;
 }
 
-.dark-mode .cursor {
-  background-color: var(--black-color);
+html.dark-mode .cursor {
+  background-color: var(--accent);
 }
 
-.dark-mode .navbar-default {
-  background-color: var(--white-color);
+html.dark-mode .box-intro {
+  background-color: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: 4px 4px 0 var(--shadow);
+  color: var(--text);
 }
 
-.dark-mode .navbar-default .navbar-nav>li>a {
-  color: var(--black-color) !important;
+html.dark-mode .navbar-default {
+  background-color: var(--nav-bg) !important;
+  border-color: var(--border);
+  box-shadow: 0 1px 0 var(--border);
 }
 
-.dark-mode .navbar-default .navbar-nav>li>a:hover,
-.dark-mode .navbar-default .navbar-nav>li>a:focus,
-.dark-mode .navbar-default .navbar-nav>li>a:active,
-.dark-mode .navbar-default .navbar-nav>.active>a,
-.dark-mode .navbar-default .navbar-nav>.active>a:hover,
-.dark-mode .navbar-default .navbar-nav>.active>a:focus {
-  color: var(--green-color) !important;
+html.dark-mode .navbar-default .navbar-nav>li>a {
+  color: var(--text) !important;
 }
 
-.dark-mode button#mode-toggle {
-  color: var(--black-color) !important;
-  background-color: var(--white-color) !important;
+html.dark-mode .navbar-default .navbar-nav>li>a:hover,
+html.dark-mode .navbar-default .navbar-nav>li>a:focus,
+html.dark-mode .navbar-default .navbar-nav>li>a:active,
+html.dark-mode .navbar-default .navbar-nav>.active>a,
+html.dark-mode .navbar-default .navbar-nav>.active>a:hover,
+html.dark-mode .navbar-default .navbar-nav>.active>a:focus {
+  color: var(--accent) !important;
+  background: transparent !important;
 }
 
-.dark-mode #about.content-fluid {
-  color: var(--black-color);
+html.dark-mode .navbar-default .navbar-toggle .icon-bar {
+  background-color: var(--text);
 }
 
-.dark-mode footer {
-  background-color: var(--green-color);
+html.dark-mode button#mode-toggle {
+  color: var(--text) !important;
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border);
 }
 
-.dark-mode footer p {
-  color: var(--black-color);
+html.dark-mode #about,
+html.dark-mode #about.content-fluid {
+  background-color: #353041;
+  color: var(--text);
 }
 
-.dark-mode footer a:hover {
-  color: rgb(212, 210, 210);
+html.dark-mode #about .soft-skills-list p {
+  color: var(--text);
 }
 
-.dark-mode footer a i {
-  color: var(--black-color);
+html.dark-mode .collapsible-skills label {
+  background: var(--card-bg);
+  color: var(--text) !important;
+  border-color: var(--border);
 }
 
-.dark-mode footer a i:hover {
-  color: rgb(212, 210, 210);
+html.dark-mode .collapsible-skills label:hover,
+html.dark-mode .collapsible-skills label:focus {
+  background: var(--bg-elevated);
 }
 
-.dark-mode footer {
-  background-color: var(--brown-color);
+html.dark-mode .collapsible-experience .experience {
+  background: #4a4458;
 }
 
-.dark-mode .back-to-top:hover,
-.dark-mode .back-to-top:focus {
-  background-color: rgb(85, 83, 83);
+html.dark-mode .collapsible-experience .experience:hover,
+html.dark-mode .collapsible-experience .experience:focus-within {
+  background: #5a5468;
 }
 
-.dark-mode .hero-section .text-animate,
-.dark-mode #home .text-animate {
-  color: var(--brown-color);
-}
-
-.dark-mode .collapsible-experience .experience {
-  background: var(--red-color);
-}
-
-.dark-mode .collapsible-experience .experience:hover,
-.dark-mode .collapsible-experience .experience:focus-within {
-  background: #423e50;
-}
-
-.dark-mode .collapsible-experience label {
+html.dark-mode .collapsible-experience label {
   background: transparent;
-  color: var(--black-color) !important;
+  color: var(--text) !important;
 }
 
-.dark-mode .collapsible-experience label:hover,
-.dark-mode .collapsible-experience label:focus {
+html.dark-mode .collapsible-experience label:hover,
+html.dark-mode .collapsible-experience label:focus {
   background: transparent;
 }
 
-.dark-mode .collapsible-skills label {
-  background: rgb(46, 46, 46);
-  color: var(--black-color) !important;
+html.dark-mode .collapsible-experience>input[type="checkbox"]:checked~.content-collapsible {
+  border-color: var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
 }
 
-.dark-mode .collapsible-skills label:hover,
-.dark-mode .collapsible-skills label:focus {
-  background: var(--white-color);
-}
-
-.dark-mode #work .container {
-  background-color: var(--green-color);
-}
-
-.dark-mode .project-group-title {
-  color: var(--beige-color);
-}
-
-.dark-mode .project-filter-btn {
-  background-color: #2e2b34;
-  color: var(--white-color);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 3px 3px 0 var(--red-color);
-}
-
-.dark-mode .project-filter-btn.active {
-  background-color: var(--brown-color);
-  color: var(--white-color);
-}
-
-.dark-mode .card {
-  background-color: #2e2b34;
-  border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 3px 3px 0 var(--red-color);
-}
-
-.dark-mode .card:hover,
-.dark-mode .card:focus-within,
-.dark-mode .card.is-revealed {
-  box-shadow: 5px 5px 0 var(--red-color);
-}
-
-.dark-mode .card h3 {
-  color: #f9f9f9 !important;
-  background: linear-gradient(145deg, #565264 0%, #706677 100%);
-}
-
-.dark-mode .card-no-image::before {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(112, 102, 119, 0.18) 100%);
-}
-
-.dark-mode .card-no-image h3 {
-  color: #f9f9f9 !important;
-  background: linear-gradient(145deg, #565264 0%, #706677 100%);
-}
-
-.dark-mode .card-content {
-  background-color: #2e2b34;
-  color: var(--black-color);
-}
-
-.dark-mode .card-content p {
-  color: rgba(249, 249, 249, 0.9);
-}
-
-.dark-mode .card-content .category {
-  color: var(--beige-color);
-}
-
-.dark-mode .card img {
-  background-color: rgba(255, 255, 255, 0.03);
-}
-
-.dark-mode .collapsible-experience li>a {
-  color: #C3A09D;
+html.dark-mode .collapsible-experience li>a {
+  color: var(--accent-soft);
   text-decoration: underline !important;
 }
 
-.dark-mode .contact-card {
-  background-color: #2e2b34;
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 6px 6px var(--red-color);
+html.dark-mode #work .container {
+  background-color: var(--section);
 }
 
-.dark-mode .contact-title,
-.dark-mode .contact-email a,
-.dark-mode .contact-links a {
-  color: var(--black-color);
+html.dark-mode .work-title,
+html.dark-mode .project-group-title {
+  color: var(--text);
 }
 
-.dark-mode .contact-email a:hover,
-.dark-mode .contact-email a:focus,
-.dark-mode .contact-links a:hover,
-.dark-mode .contact-links a:focus {
-  color: var(--green-color);
+html.dark-mode .project-filter-btn {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 3px 3px 0 var(--shadow);
 }
 
-.dark-mode .work-title {
-  color: var(--black-color);
+html.dark-mode .project-filter-btn:hover,
+html.dark-mode .project-filter-btn:focus {
+  box-shadow: 4px 4px 0 var(--shadow);
 }
 
-.dark-mode #about {
-  background-color: var(--brown-color);
+html.dark-mode .project-filter-btn.active {
+  background-color: var(--accent);
+  color: #121016;
+  border-color: var(--accent);
 }
 
-.dark-mode .back-to-top {
-  color: var(--black-color);
+html.dark-mode .card {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+  box-shadow: 3px 3px 0 var(--shadow);
 }
 
+html.dark-mode .card:hover,
+html.dark-mode .card:focus-within,
+html.dark-mode .card.is-revealed {
+  box-shadow: 5px 5px 0 var(--shadow);
+}
 
+html.dark-mode .card h3,
+html.dark-mode .card-no-image h3 {
+  color: #f9f9f9 !important;
+  background: linear-gradient(145deg, #4a4458 0%, #706677 100%);
+}
+
+html.dark-mode .card-no-image::before {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05) 0%, rgba(112, 102, 119, 0.2) 100%);
+}
+
+html.dark-mode .card-content {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+html.dark-mode .card-content p,
+html.dark-mode .card-content h4,
+html.dark-mode .card-content h5 {
+  color: var(--text);
+}
+
+html.dark-mode .card-content .category {
+  color: var(--accent);
+}
+
+html.dark-mode .card img {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+html.dark-mode .contact-card {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+  box-shadow: 6px 6px var(--shadow);
+}
+
+html.dark-mode .contact-title,
+html.dark-mode .contact-email a,
+html.dark-mode .contact-links a {
+  color: var(--text);
+}
+
+html.dark-mode .contact-email a:hover,
+html.dark-mode .contact-email a:focus,
+html.dark-mode .contact-links a:hover,
+html.dark-mode .contact-links a:focus {
+  color: var(--accent);
+}
+
+html.dark-mode footer {
+  background-color: var(--section);
+}
+
+html.dark-mode footer p,
+html.dark-mode footer a i {
+  color: var(--text);
+}
+
+html.dark-mode footer a:hover,
+html.dark-mode footer a i:hover {
+  color: var(--accent);
+}
+
+html.dark-mode .back-to-top {
+  color: var(--text);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+html.dark-mode .back-to-top:hover,
+html.dark-mode .back-to-top:focus {
+  background-color: #3a3548;
+  color: var(--text);
+}
+
+html.dark-mode .loader {
+  background-color: var(--bg);
+}
+
+html.dark-mode .loader-content h1 {
+  color: var(--accent);
+}
+
+html.dark-mode .loader-skip {
+  background: var(--card-bg);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+
+html.dark-mode .loader-skip:hover,
+html.dark-mode .loader-skip:focus-visible {
+  background: var(--bg-elevated);
+}
+
+html.dark-mode .skip-link {
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+
+html.dark-mode :focus-visible {
+  outline-color: var(--accent);
+}
 
 /* ----------------------------------------------- CSS LOADER -------------------------------------------------------- */
 

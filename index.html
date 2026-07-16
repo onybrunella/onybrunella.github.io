@@ -13,6 +13,20 @@
     <title>Ony Brunella</title>
     <link rel="icon" href="assets/img/flower.png" type="image/x-icon" />
 
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("mode");
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (saved === "dark" || (!saved && prefersDark)) {
+            document.documentElement.classList.add("dark-mode");
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="stylesheet" href="assets/css/var.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link

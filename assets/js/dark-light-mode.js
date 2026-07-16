@@ -1,49 +1,77 @@
+const root = document.documentElement;
 const toggleButton = document.getElementById("mode-toggle");
-const body = document.body;
+const STORAGE_KEY = "mode";
 
-const currentMode = localStorage.getItem("mode");
+function prefersDark() {
+  return (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+}
+
+function isDarkMode() {
+  return root.classList.contains("dark-mode");
+}
+
+function applyMode(mode) {
+  const dark = mode === "dark";
+  root.classList.toggle("dark-mode", dark);
+  document.body.classList.toggle("dark-mode", dark);
+  updateIcon();
+}
+
+function getInitialMode() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "dark" || saved === "light") return saved;
+  } catch (e) {
+    /* ignore */
+  }
+  return prefersDark() ? "dark" : "light";
+}
 
 function updateIcon() {
   const sunIcon = document.querySelector("#mode-toggle img.fa-sun");
   const moonIcon = document.querySelector("#mode-toggle img.fa-moon");
-  const isDark = body.classList.contains("dark-mode");
+  const dark = isDarkMode();
 
   if (sunIcon && moonIcon) {
-    if (isDark) {
-      sunIcon.style.display = "inline-block";
-      moonIcon.style.display = "none";
-    } else {
-      sunIcon.style.display = "none";
-      moonIcon.style.display = "inline-block";
-    }
+    sunIcon.style.display = dark ? "inline-block" : "none";
+    moonIcon.style.display = dark ? "none" : "inline-block";
   }
 
   if (toggleButton) {
-    toggleButton.setAttribute("aria-pressed", isDark ? "true" : "false");
+    toggleButton.setAttribute("aria-pressed", dark ? "true" : "false");
     toggleButton.setAttribute(
       "aria-label",
-      isDark
-        ? "Activer le mode lumineux"
-        : "Activer le mode sombre"
+      dark ? "Activer le mode lumineux" : "Activer le mode sombre"
     );
   }
 }
 
-if (currentMode === "dark") {
-  body.classList.add("dark-mode");
-} else {
-  body.classList.remove("dark-mode");
-}
-
-updateIcon();
+applyMode(getInitialMode());
 
 if (toggleButton) {
   toggleButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    const newMode = body.classList.contains("dark-mode") ? "dark" : "light";
-    localStorage.setItem("mode", newMode);
-
-    updateIcon();
+    const next = isDarkMode() ? "light" : "dark";
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch (e) {
+      /* ignore */
+    }
+    applyMode(next);
   });
+}
+
+if (window.matchMedia) {
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      try {
+        if (localStorage.getItem(STORAGE_KEY)) return;
+      } catch (e) {
+        return;
+      }
+      applyMode(event.matches ? "dark" : "light");
+    });
 }
