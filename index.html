@@ -30,12 +30,20 @@
     data-spy="scroll"
     data-target=".navbar"
     data-offset="60"
-    style="zoom: 1"
   >
-    <div class="loader" role="presentation"></div>
-    <div class="loader-content" role="presentation" aria-hidden="true">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <div class="loader" id="site-loader" aria-hidden="true"></div>
+    <div
+      class="loader-content"
+      id="loader-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="loader-title"
+      aria-describedby="loader-skip-text"
+    >
       <div class="loader-spinner" aria-hidden="true"></div>
-      <h1>
+      <h1 id="loader-title">
         <span class="let1">o</span>
         <span class="let2">n</span>
         <span class="let3">y</span>
@@ -49,7 +57,9 @@
         <span class="let11">l</span>
         <span class="let12">a</span>
       </h1>
-      <p class="loader-skip">Appuyer pour continuer</p>
+      <button type="button" class="loader-skip" id="loader-skip-text">
+        Appuyer pour continuer
+      </button>
     </div>
 
     <div id="content" style="opacity: 0">
@@ -57,7 +67,7 @@
         href="#home"
         class="back-to-top"
         aria-label="Revenir en haut de la page"
-        ><i class="fa fa-chevron-up"></i
+        ><i class="fa fa-chevron-up" aria-hidden="true"></i
       ></a>
 
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -68,6 +78,7 @@
               class="navbar-toggle"
               data-toggle="collapse"
               data-target="#navbar"
+              aria-controls="navbar"
               aria-expanded="false"
               aria-label="Menu de navigation"
             >
@@ -88,7 +99,8 @@
                   class="resume-button"
                   href="CV_Ony_Brunella_ANDRIATSAHAVOJAONA.pdf"
                   target="_blank"
-                  role="link"
+                  rel="noopener noreferrer"
+                  aria-label="Télécharger mon CV (ouvre un nouvel onglet)"
                   >CV</a
                 >
               </li>
@@ -96,7 +108,9 @@
           </div>
           <button
             id="mode-toggle"
+            type="button"
             aria-label="Basculer le mode sombre/lumineux"
+            aria-pressed="false"
           >
             <!-- <i class="fas fa-sun"></i>
         <i class="fas fa-moon"></i> -->
@@ -116,6 +130,7 @@
         </div>
       </nav>
 
+      <main id="main-content">
       <section class="content-fluid page-view hero-section" role="banner">
         <div class="hero-container">
           <img
@@ -313,54 +328,51 @@
                 />
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <p>
-                  Je suis actuellement étudiante en deuxième année à l'<strong
-                    >ESIEE Paris</strong
-                  >, en formation d'ingénieur
-                  <strong
-                    >Informatique, design, architecture et développement</strong
-                  >, <strong>option réseau</strong>. Je suis en
-                  <strong
-                    >alternance en tant qu'apprentie ingénieur design et
-                    développement d'IHM web en Angular</strong
-                  >
-                  chez <strong>MBDA France</strong>. Diplômée d'un
-                  <strong>BUT Informatique</strong> à l'IUT de Villetaneuse
-                  (Université Sorbonne Paris Nord), j'ai également effectué une
-                  <strong
-                    >alternance en tant qu'intégratrice web -
-                    webdesigner</strong
-                  >
-                  à la <strong>Philharmonie de Paris</strong>.
-                </p>
-                <p>
-                  Je nourris une véritable passion pour les
-                  <strong>réseaux</strong>, le
-                  <strong>développement logiciel</strong> et le
-                  <strong>web design</strong>. Mon objectif professionnel est de
-                  devenir <strong>ingénieure en informatique</strong>,
-                  spécialisée en réseaux et/ou développement logiciel.
-                </p>
-                <p>
-                  Je suis une personne
-                  <strong>dynamique, curieuse et créative</strong>. J'aime
-                  travailler en <strong>équipe</strong> et
-                  <strong>apprendre</strong> de nouvelles technologies.
-                </p>
-                <p>
-                  Je suis également passionnée par la
-                  <strong>musique (pratique du solfège et du hautbois)</strong>
-                  et la <strong>natation</strong>.
-                </p>
-              </div>
+            <div class="col-lg-6">
+              <p>
+                Je suis actuellement étudiante en deuxième année à l'<strong
+                  >ESIEE Paris</strong
+                >, en formation d'ingénieur
+                <strong
+                  >Informatique, design, architecture et développement</strong
+                >, <strong>option réseau</strong>. Je suis en
+                <strong
+                  >alternance en tant qu'apprentie ingénieur design et
+                  développement d'IHM web en Angular</strong
+                >
+                chez <strong>MBDA France</strong>. Diplômée d'un
+                <strong>BUT Informatique</strong> à l'IUT de Villetaneuse
+                (Université Sorbonne Paris Nord), j'ai également effectué une
+                <strong
+                  >alternance en tant qu'intégratrice web - webdesigner</strong
+                >
+                à la <strong>Philharmonie de Paris</strong>.
+              </p>
+              <p>
+                Je nourris une véritable passion pour les
+                <strong>réseaux</strong>, le
+                <strong>développement logiciel</strong> et le
+                <strong>web design</strong>. Mon objectif professionnel est de
+                devenir <strong>ingénieure en informatique</strong>,
+                spécialisée en réseaux et/ou développement logiciel.
+              </p>
+              <p>
+                Je suis une personne
+                <strong>dynamique, curieuse et créative</strong>. J'aime
+                travailler en <strong>équipe</strong> et
+                <strong>apprendre</strong> de nouvelles technologies.
+              </p>
+              <p>
+                Je suis également passionnée par la
+                <strong>musique (pratique du solfège et du hautbois)</strong>
+                et la <strong>natation</strong>.
+              </p>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 mb-4">
+        <div class="container about-skills-container">
+          <div class="row about-skills-row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-4">
               <section class="collapsible-skills">
                 <input
                   type="checkbox"
@@ -371,7 +383,7 @@
                 <h4 class="skills">
                   <label for="skills1"><strong>Compétences</strong></label>
                 </h4>
-                <div class="content-collapsible" role="button">
+                <div class="content-collapsible">
                   <div id="skills">
                     <i class="devicon-html5-plain" title="HTML5"></i>
                     <i class="devicon-css3-plain" title="CSS3"></i>
@@ -403,7 +415,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-4">
               <section class="collapsible-skills">
                 <input
                   type="checkbox"
@@ -416,8 +428,8 @@
                     ><strong>Compétences en cours d'acquisition</strong></label
                   >
                 </h4>
-                <div class="content-collapsible" role="button">
-                  <div id="skills">
+                <div class="content-collapsible">
+                  <div id="skills-learning">
                     <i class="devicon-react-plain" title="React"></i>
                     <i
                       class="devicon-nextjs-original-wordmark"
@@ -432,7 +444,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-4">
               <section class="collapsible-skills">
                 <input
                   type="checkbox"
@@ -443,7 +455,7 @@
                 <h4 class="skills">
                   <label for="skills3"><strong>Soft Skills</strong></label>
                 </h4>
-                <div class="content-collapsible" role="button">
+                <div class="content-collapsible">
                   <div class="soft-skills-list">
                     <p>Créativité</p>
                     <p>Curiosité</p>
@@ -1374,6 +1386,7 @@
       </section>
 
       <!-- --------------------------- Footer ------------------------------------------------------------------- -->
+      </main>
       <footer class="container-fluid text-center" role="contentinfo">
         <a
           class="up-arrow"
